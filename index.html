@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script>
+        function info()
+        {
+
+            window.location = "home.html";
+        }
+        function form1() {
+
+            window.location="signup.html";
+        }
+
+    </script>
+    <style>
+        .dropdown-menu .dropdown-item:hover {
+            background-color: purple;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-primary" ">
+        <a class="navbar-brand" href="#">
+
+            <img src="Bank-Of-America-Logo-small_full.gif" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Previous</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:rebeccapurple;" id="a1">
+                        <a class="dropdown-item" href="#" style="color:white">New Accoount</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" style="color:white">Loan</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" style="color:white">Details</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <div class="container" ng-app="">
+
+        <form name="form" action = "http://127.0.0.1:8081/index" method = "GET">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" ng-model="em1" class="form-control" id="email" placeholder="Enter email" name="em2">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" ng-model="pas1" id="pwd" placeholder="Enter password" name="pss1">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <button type="button" class="btn btn-success" onclick="form1() ">Signup</button>
+                </div>
+                <div class="form-group col-6">
+                   
+                  <button type="submit" class="btn btn-primary " onclick="info()">SingIn</button>
+               </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
